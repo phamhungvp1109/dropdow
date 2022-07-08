@@ -1,0 +1,84 @@
+body{
+    background-image: url(../image/bg.jpeg);
+    background-size: cover;
+    background-position-y: -100px;
+}
+.container{
+    max-width: 960px;
+    margin: 0px auto;
+}
+#header{
+    background-color: black;   
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+}
+#main-menu{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#main-menu li{
+    position: relative;
+}
+#main-menu li a{
+    color:aliceblue;
+    display: block;
+    padding: 22px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+/* Thiet lap border khi hove */
+#main-menu>li>a{
+    position: relative;
+}
+#main-menu>li>a::before{
+    content: "";
+    height: 4px;
+    width: 100%;
+    background:red;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    display: none;
+}
+#main-menu>li:hover>a::before{
+    display: block;
+}
+/* End--Thiet lap border khi hove */
+#logo{
+    padding: 5px 0px;
+}
+#logo img{
+    max-width: 50px;
+    height: auto;
+    
+}
+#main-menu ul.sub-menu{
+    position: absolute;
+    background-color: black;
+    padding: 15px 0px;
+    list-style: none;
+    width: 200px;
+    display: none;
+}
+#main-menu li:hover>ul.sub-menu{
+    display: block;
+   
+}
+#main-menu ul.sub-menu a{
+    padding: 8px 15px;
+    border-bottom: 1px solid #333;
+    left: 0px;
+}
+#main-menu ul.sub-menu li:last-child a
+{
+    border: none;
+}
+#main-menu ul.sub-menu ul.sub-menu{
+    left: 200px;
+    top:-15px;
+}
